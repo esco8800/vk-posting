@@ -2,12 +2,28 @@
 
 namespace console\controllers\vk;
 
+use common\components\vk\VkComponent;
 use yii\base\Action;
 use yii\console\ExitCode;
 use yii\helpers\Console;
 
 class PostingAction extends  Action
 {
+    /**
+     * @var VkComponent
+     */
+    private $vkComponent;
+
+    public function __construct(
+        $id,
+        $controller,
+        VkComponent $vkComponent,
+        $config = []
+    ) {
+        $this->vkComponent = $vkComponent;
+        parent::__construct($id, $controller, $config);
+    }
+
     /**
      * Автопостинг предложки
      * @return int
