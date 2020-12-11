@@ -9,6 +9,7 @@ use yii\helpers\Console;
 class PostingAction extends  Action
 {
     /**
+     * Автопостинг предложки
      * @return int
      */
     public function run()
