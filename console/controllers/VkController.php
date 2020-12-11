@@ -13,7 +13,7 @@ class VkController extends Controller
     public function actions()
     {
         return [
-            'posting' => 'common\modules\user\controllers\api\NetworkAction',
+            'posting' => 'console\controllers\vk\PostingAction',
         ];
     }
 
