@@ -51,7 +51,6 @@ class NetworkAuthAction extends Action
     public function run()
     {
         try {
-            echo getenv('CLIENT_ID');
             $request = new RequestDTO(\Yii::$app->request);
 
             if ($request->fromSocials()) {
