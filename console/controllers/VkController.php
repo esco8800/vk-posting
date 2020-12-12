@@ -6,7 +6,6 @@ use yii\console\Controller;
 
 class VkController extends Controller
 {
-
     /**
      * @return array
      */

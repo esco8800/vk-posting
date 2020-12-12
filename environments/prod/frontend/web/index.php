@@ -6,7 +6,7 @@ require __DIR__ . '/../../vendor/autoload.php';
 require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php';
 
 (new Symfony\Component\Dotenv\Dotenv)
-    ->load(__DIR__ . '/../.env.example');
+    ->load(__DIR__ . '/../../.env.example');
 
 require __DIR__ . '/../../common/config/bootstrap.php';
 require __DIR__ . '/../config/bootstrap.php';
