@@ -7,5 +7,5 @@ return [
     'user.passwordResetTokenExpire' => 3600,
     'user.passwordMinLength' => 8,
     'accessToken' => getenv('ACCESS_TOKEN'),
-    'frontendHost' => getenv('FRONTEND_HOST')
+    'frontendUrl' => getenv('FRONTEND_HOST')
 ];

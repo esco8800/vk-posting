@@ -13,9 +13,10 @@ return [
             'class' => 'yii\authclient\Collection',
             'clients' => [
                 'vkontakte' => [
-                    'class' => 'yii\authclient\clients\Vkontakte',
+                    'class' => 'yii\authclient\clients\VKontakte',
                     'clientId' => getenv('CLIENT_ID'),
                     'clientSecret' => getenv('CLIENT_SECRET'),
+                    'returnUrl' => getenv('FRONTEND_HOST'),
                 ],
             ],
         ]
