@@ -9,5 +9,15 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'vkontakte' => [
+                    'class' => 'yii\authclient\clients\Vkontakte',
+                    'clientId' => getenv('CLIENT_ID'),
+                    'clientSecret' => getenv('CLIENT_SECRET'),
+                ],
+            ],
+        ]
     ],
 ];

@@ -31,7 +31,7 @@ class PostingAction extends  Action
     public function run()
     {
         try {
-
+            var_dump($this->vkComponent->getSuggestsPost(135904652));
             $this->controller->stdout("Успешно\n", Console::FG_GREEN);
             return ExitCode::OK;
 
