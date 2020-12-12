@@ -31,6 +31,17 @@ class VkComponent
         $this->setAccessToken();
     }
 
+    /**
+     * @param $groupId
+     * @throws \VK\Exceptions\Api\VKApiBlockedException
+     * @throws \VK\Exceptions\Api\VKApiWallAddPostException
+     * @throws \VK\Exceptions\Api\VKApiWallAdsPostLimitReachedException
+     * @throws \VK\Exceptions\Api\VKApiWallAdsPublishedException
+     * @throws \VK\Exceptions\Api\VKApiWallLinksForbiddenException
+     * @throws \VK\Exceptions\Api\VKApiWallTooManyRecipientsException
+     * @throws \VK\Exceptions\VKApiException
+     * @throws \VK\Exceptions\VKClientException
+     */
     public function postSuggestsPost($groupId)
     {
         $post = $this->getSuggestsPost($groupId);

@@ -33,6 +33,8 @@ return [
         'path' => 'dev',
         'setWritable' => [
             'console/runtime',
+            'frontend/runtime',
+            'frontend/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -40,17 +42,21 @@ return [
         ],
         'setCookieValidationKey' => [
             'common/config/codeception-local.php',
+            'frontend/config/main-local.php',
         ],
     ],
     'Production' => [
         'path' => 'prod',
         'setWritable' => [
             'console/runtime',
+            'frontend/runtime',
+            'frontend/web/assets',
         ],
         'setExecutable' => [
             'yii',
         ],
         'setCookieValidationKey' => [
+            'frontend/config/main-local.php',
         ],
     ],
 ];
