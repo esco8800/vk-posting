@@ -1,4 +1,10 @@
 <?php
+
+$params = array_merge(
+    require __DIR__ . '/params.php',
+    require __DIR__ . '/params-local.php'
+);
+
 return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -14,9 +20,9 @@ return [
             'clients' => [
                 'vkontakte' => [
                     'class' => 'yii\authclient\clients\VKontakte',
-                    'clientId' => getenv('CLIENT_ID'),
-                    'clientSecret' => getenv('CLIENT_SECRET'),
-                    'returnUrl' => getenv('FRONTEND_HOST'),
+                    'clientId' => $params['clientId'] ?? null,
+                    'clientSecret' => $params['clientSecret'] ?? null,
+                    'returnUrl' => $params['clientId'] ?? null,
                 ],
             ],
         ]
