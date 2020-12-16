@@ -52,18 +52,20 @@ class NetworkAuthAction extends Action
     {
         try {
             $request = new RequestDTO(\Yii::$app->request);
+            $client = $this->service->getClient($request->client);
 
             if ($request->fromSocials()) {
+                $client->fetchAccessToken($request->code);
                 $this->redirect($this->service->buildFrontendRedirectUrl([
-                    'code' => $request->code,
-                    'state' => $request->state
+                    'access_token' => $client->accessToken->token,
+                    'state' => $request->state,
                 ]));
             }
 
             if ($request->fromFrontend()) {
-                $client = $this->service->getClient($request->client);
                 $this->redirect($client->buildAuthUrl([
-                    'state' => $request->state
+                    'state' => $request->state,
+                    'scope' => 'offline',
                 ]));
             }
         } catch (\Exception $e) {

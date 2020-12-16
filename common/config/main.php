@@ -22,9 +22,11 @@ return [
                     'class' => 'yii\authclient\clients\VKontakte',
                     'clientId' => $params['clientId'] ?? null,
                     'clientSecret' => $params['clientSecret'] ?? null,
-                    'returnUrl' => $params['clientId'] ?? null,
+                    'returnUrl' => $params['returnUrl'] ?? null,
+                    'validateAuthState' => false,
                 ],
             ],
         ]
     ],
+    'params' => $params,
 ];

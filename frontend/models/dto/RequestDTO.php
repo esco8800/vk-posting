@@ -31,7 +31,7 @@ class RequestDTO
      */
     public function __construct(Request $request)
     {
-        $this->client = $request->get('client');
+        $this->client = $request->get('client', 'vkontakte');
         $this->code = $request->get('code');
         $this->state = $request->get('state');
     }
